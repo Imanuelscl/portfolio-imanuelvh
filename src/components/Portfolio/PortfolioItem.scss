@@ -1,0 +1,56 @@
+.portfolio-item {
+  box-sizing: border-box;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem; /* Add left margin */
+  margin-right: 1rem; /* Add right margin */
+
+  .border {
+    border: 1px solid #ccc;
+  }
+
+  .portfolio-image {
+    width: 100%;
+    height: 300px; /* Set the desired height */
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1); /* Add a hover effect by scaling the image */
+    }
+  }
+
+  .portfolio-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio-category {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Responsive layout for three items per row
+  @media (min-width: 768px) {
+    width: calc(33.333% - 2rem); /* Adjust the width as needed */
+    margin-right: 1rem;
+
+    &:nth-child(3n) {
+      margin-right: 0; /* Clear the right margin for every third item */
+    }
+  }
+}
